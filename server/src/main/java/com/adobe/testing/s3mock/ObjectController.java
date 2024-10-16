@@ -117,7 +117,7 @@ import software.amazon.awssdk.services.s3.model.ObjectCannedACL;
 /**
  * Handles requests related to objects.
  */
-@CrossOrigin(origins = "*", exposedHeaders = "*")
+@CrossOrigin(origins = "*", exposedHeaders = "*", methods = {RequestMethod.GET, RequestMethod.HEAD, RequestMethod.OPTIONS, RequestMethod.PUT, RequestMethod.POST, RequestMethod.DELETE, RequestMethod.PATCH})
 @Controller
 @RequestMapping("${com.adobe.testing.s3mock.contextPath:}")
 public class ObjectController {

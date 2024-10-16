@@ -72,13 +72,14 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import software.amazon.awssdk.utils.http.SdkHttpUtils;
 
 /**
  * Handles requests related to parts.
  */
-@CrossOrigin(origins = "*", exposedHeaders = "*")
+@CrossOrigin(origins = "*", exposedHeaders = "*", methods = {RequestMethod.GET, RequestMethod.HEAD, RequestMethod.OPTIONS, RequestMethod.PUT, RequestMethod.POST, RequestMethod.DELETE, RequestMethod.PATCH})
 @Controller
 @RequestMapping("${com.adobe.testing.s3mock.contextPath:}")
 public class MultipartController {
